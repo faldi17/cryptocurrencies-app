@@ -11,7 +11,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/1"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 object-cover"
             />
@@ -45,7 +45,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/2"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 object-cover"
             />
@@ -79,7 +79,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/3"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -113,7 +113,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/4"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -147,7 +147,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/5"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -181,7 +181,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/6"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -215,7 +215,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/7"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -249,7 +249,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/8"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -283,7 +283,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/9"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -317,7 +317,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/10"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -352,7 +352,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/1"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -386,7 +386,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/2"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -420,7 +420,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/3"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -454,7 +454,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/4"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -488,7 +488,7 @@
           <!-- ticker -->
           <div class="flex items-center">
             <img
-              src="https://source.unsplash.com/random/5"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 "
             />
@@ -522,7 +522,7 @@
       <!-- 1 -->
       <a href="#" class="rounded m-6" target="_blank">
         <img
-          src="https://source.unsplash.com/random/10"
+          src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
           alt="event image"
           class="w-80 h-52 mx-auto object-cover rounded"
         />
@@ -537,7 +537,7 @@
       <!-- 2 -->
       <a href="#" class="rounded m-6" target="_blank">
         <img
-          src="https://source.unsplash.com/random/11"
+          src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
           alt="event image"
           class="w-80 h-52 mx-auto object-cover rounded"
         />
@@ -552,7 +552,7 @@
       <!-- 3 -->
       <a href="#" class="rounded m-6" target="_blank">
         <img
-          src="https://source.unsplash.com/random/12"
+          src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
           alt="event image"
           class="w-80 h-52 mx-auto object-cover rounded"
         />
@@ -601,7 +601,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/1"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
@@ -630,7 +630,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/2"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
@@ -659,7 +659,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/3"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
@@ -688,7 +688,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/4"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
@@ -717,7 +717,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/5"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
@@ -746,7 +746,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/6"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
@@ -775,7 +775,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/7"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
@@ -804,7 +804,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/8"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
@@ -833,7 +833,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/9"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
@@ -862,7 +862,7 @@
           <td class="p-4 flex items-center">
             <p class="mr-2">1</p>
             <img
-              src="https://source.unsplash.com/random/10"
+              src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
               alt="coin logo"
               class="w-6 h-6 rounded-full mr-1"
             />
