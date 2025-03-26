@@ -257,15 +257,18 @@
 <style scoped>
     .marquee-content {
         display: flex;
-        white-space: nowrap;
-        animation: marquee 20s linear infinite;
+        animation: scrolling 20s linear infinite;
     }
 
-    @keyframes marquee {
-        from {
-            transform: translateX(100%);
+    .marquee-content:hover {
+        animation-play-state: paused;
+    }
+    
+    @keyframes scrolling {
+        0% {
+            transform: translateX(0);
         }
-        to {
+        100% {
             transform: translateX(-100%);
         }
     }
@@ -280,37 +283,44 @@
     }
 
     .event {
-        background: #111;
+        background: #f9f9f9;
         padding: 4rem 0;
     }
+
     .event-card {
         width: 18rem;
-        background: #222;
+        background: #fff;
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .event-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
+
     .event-image {
         width: 100%;
         height: 180px;
         object-fit: cover;
+        background: #eee;
     }
+
     .event-content {
         padding: 1rem;
     }
+
     .event-title {
         font-size: 1rem;
         font-weight: bold;
-        color: #fff;
+        color: #333;
     }
+
     .event-desc {
         font-size: 0.875rem;
-        color: #aaa;
+        color: #666;
         margin-top: 0.5rem;
     }
 </style>
