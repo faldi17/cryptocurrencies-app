@@ -1,142 +1,98 @@
 <template>
     <!-- ============ Marquee ============ -->
-    <div class="marquee w-full h-12 overflow-hidden bg-black position-relative">
-        <ul class="marquee-content h-full flex" ref="mq">
-            <!-- main -->
-            <!-- 1 -->
+    <div class="marquee w-full h-12 overflow-hidden bg-black relative">
+        <ul class="marquee-content flex h-full" ref="mq">
             <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
+                v-for="coin in coins"
+                :key="coin.id"
+                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100 px-4"
             >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
+                <div class="flex justify-between w-48">
                     <div class="flex items-center">
                         <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
+                            :src="coin.image"
                             alt="coin logo"
                             class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 object-cover"
                         />
                         <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
+                            <p class="font-bold">{{ coin.name }}</p>
+                            <p class="text-xs uppercase tracking-widest">
+                                {{ coin.symbol }}
+                            </p>
                         </div>
                     </div>
-                    <!-- price -->
                     <div>
                         <p
                             class="font-bold text-xs lg:text-base flex justify-end"
                         >
-                            44,042.32
+                            ${{ coin.current_price.toLocaleString() }}
                         </p>
-                        <!-- percent green -->
                         <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
+                            :class="{
+                                'text-green-400':
+                                    coin.price_change_percentage_1h_in_currency >
+                                    0,
+                                'text-red-400':
+                                    coin.price_change_percentage_1h_in_currency <
+                                    0,
+                            }"
+                            class="font-bold text-xs flex justify-end items-center"
                         >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <!-- clones -->
-            <!-- 1 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold flex justify-end text-xs lg:text-base"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
+                            <fa
+                                :icon="
+                                    coin.price_change_percentage_1h_in_currency >
+                                    0
+                                        ? 'caret-up'
+                                        : 'caret-down'
+                                "
+                                class="mr-1"
+                            />
+                            {{
+                                coin.price_change_percentage_1h_in_currency.toFixed(
+                                    2
+                                )
+                            }}%
                         </p>
                     </div>
                 </div>
             </li>
         </ul>
     </div>
+
     <!-- ============ Events ============ -->
     <section class="event">
         <div
-            class="container mx-auto py-4 lg:py-24 flex flex-wrap justify-center"
+            class="container mx-auto py-4 lg:py-24 flex flex-wrap justify-center gap-6"
         >
-            <!-- 1 -->
-            <a href="#" class="rounded m-6" target="_blank">
+            <a
+                v-for="event in events"
+                :key="event.id"
+                :href="event.link"
+                class="event-card"
+                target="_blank"
+            >
                 <img
-                    src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
+                    :src="event.image"
                     alt="event image"
-                    class="w-80 h-52 mx-auto object-cover rounded"
+                    class="event-image"
+                    @error="handleImageError"
                 />
-                <div class="pt-2 w-80">
-                    <p class="font-medium pt-2">Lorem Ipsum</p>
-                    <p class="text-xs pt-2 w-3/4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sequi, error. Facilis temporibus ratione obcaecati
-                        nulla!
-                    </p>
-                </div>
-            </a>
-            <!-- 2 -->
-            <a href="#" class="rounded m-6" target="_blank">
-                <img
-                    src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                    alt="event image"
-                    class="w-80 h-52 mx-auto object-cover rounded"
-                />
-                <div class="pt-2 w-80">
-                    <p class="font-medium pt-2">Lorem Ipsum</p>
-                    <p class="text-xs pt-2 w-3/4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sequi, error. Facilis temporibus ratione obcaecati
-                        nulla!
-                    </p>
-                </div>
-            </a>
-            <!-- 3 -->
-            <a href="#" class="rounded m-6" target="_blank">
-                <img
-                    src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                    alt="event image"
-                    class="w-80 h-52 mx-auto object-cover rounded"
-                />
-                <div class="pt-2 w-80">
-                    <p class="font-medium pt-2">Lorem Ipsum</p>
-                    <p class="text-xs pt-2 w-3/4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Sequi, error. Facilis temporibus ratione obcaecati
-                        nulla!
-                    </p>
+                <div class="event-content">
+                    <p class="event-title">{{ event.title }}</p>
+                    <p class="event-desc">{{ event.description }}</p>
                 </div>
             </a>
         </div>
     </section>
+
     <!-- ============ Table ============ -->
     <div class="container mx-auto pt-18 pb-48 px-2">
-        <!-- search -->
         <div class="flex justify-end pb-2">
             <div class="relative">
                 <input
+                    v-model="searchQuery"
                     type="text"
-                    placeholder="search..."
+                    placeholder="Search..."
                     class="border border-gray-500 rounded p-2 focus:outline-none focus:ring focus:ring-gray-300"
                 />
                 <fa
@@ -145,9 +101,8 @@
                 />
             </div>
         </div>
-        <!-- table -->
+
         <table class="table-fixed cursor-pointer">
-            <!-- head -->
             <thead class="bg-gray-200">
                 <tr class="text-left text-gray-600 text-sm">
                     <th class="w-1/4 p-4">Name</th>
@@ -157,237 +112,59 @@
                     <th class="w-1/4 hidden sm:table-cell">Volume</th>
                 </tr>
             </thead>
-            <!-- body -->
             <tbody class="divide-y">
-                <!-- 1 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
+                <tr
+                    v-for="coin in filteredCoins"
+                    :key="coin.id"
+                    class="text-sm hover:bg-gray-100 transition duration-300"
+                >
                     <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
                         <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
+                            :src="coin.image"
                             alt="coin logo"
                             class="w-6 h-6 rounded-full mr-1"
                         />
-                        <p class="font-bold mr-1">Bitcoin</p>
+                        <p class="font-bold mr-1">{{ coin.name }}</p>
                         <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
+                            {{ coin.symbol }}
                         </p>
                     </td>
-                    <td class="font-bold">$44,042.32</td>
                     <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
+                        ${{ coin.current_price.toLocaleString() }}
+                    </td>
+                    <td class="font-bold">
+                        <div
+                            :class="{
+                                'text-green-500':
+                                    coin.price_change_percentage_1h_in_currency >
+                                    0,
+                                'text-red-500':
+                                    coin.price_change_percentage_1h_in_currency <
+                                    0,
+                            }"
+                        >
+                            <fa
+                                :icon="
+                                    coin.price_change_percentage_1h_in_currency >
+                                    0
+                                        ? 'caret-up'
+                                        : 'caret-down'
+                                "
+                                class="mr-1"
+                            />
+                            {{
+                                coin.price_change_percentage_1h_in_currency.toFixed(
+                                    2
+                                )
+                            }}%
                         </div>
                     </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
-                </tr>
-                <!-- 2 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
-                    <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-6 h-6 rounded-full mr-1"
-                        />
-                        <p class="font-bold mr-1">Bitcoin</p>
-                        <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
-                        </p>
+                    <td class="hidden sm:table-cell">
+                        ${{ coin.market_cap.toLocaleString() }}
                     </td>
-                    <td class="font-bold">$44,042.32</td>
-                    <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
-                        </div>
+                    <td class="pr-4 hidden sm:table-cell">
+                        {{ coin.total_volume.toLocaleString() }}
                     </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
-                </tr>
-                <!-- 3 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
-                    <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-6 h-6 rounded-full mr-1"
-                        />
-                        <p class="font-bold mr-1">Bitcoin</p>
-                        <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
-                        </p>
-                    </td>
-                    <td class="font-bold">$44,042.32</td>
-                    <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
-                        </div>
-                    </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
-                </tr>
-                <!-- 4 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
-                    <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-6 h-6 rounded-full mr-1"
-                        />
-                        <p class="font-bold mr-1">Bitcoin</p>
-                        <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
-                        </p>
-                    </td>
-                    <td class="font-bold">$44,042.32</td>
-                    <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
-                        </div>
-                    </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
-                </tr>
-                <!-- 5 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
-                    <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-6 h-6 rounded-full mr-1"
-                        />
-                        <p class="font-bold mr-1">Bitcoin</p>
-                        <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
-                        </p>
-                    </td>
-                    <td class="font-bold">$44,042.32</td>
-                    <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
-                        </div>
-                    </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
-                </tr>
-                <!-- 6 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
-                    <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-6 h-6 rounded-full mr-1"
-                        />
-                        <p class="font-bold mr-1">Bitcoin</p>
-                        <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
-                        </p>
-                    </td>
-                    <td class="font-bold">$44,042.32</td>
-                    <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
-                        </div>
-                    </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
-                </tr>
-                <!-- 7 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
-                    <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-6 h-6 rounded-full mr-1"
-                        />
-                        <p class="font-bold mr-1">Bitcoin</p>
-                        <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
-                        </p>
-                    </td>
-                    <td class="font-bold">$44,042.32</td>
-                    <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
-                        </div>
-                    </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
-                </tr>
-                <!-- 8 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
-                    <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-6 h-6 rounded-full mr-1"
-                        />
-                        <p class="font-bold mr-1">Bitcoin</p>
-                        <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
-                        </p>
-                    </td>
-                    <td class="font-bold">$44,042.32</td>
-                    <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
-                        </div>
-                    </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
-                </tr>
-                <!-- 9 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
-                    <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-6 h-6 rounded-full mr-1"
-                        />
-                        <p class="font-bold mr-1">Bitcoin</p>
-                        <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
-                        </p>
-                    </td>
-                    <td class="font-bold">$44,042.32</td>
-                    <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
-                        </div>
-                    </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
-                </tr>
-                <!-- 10 -->
-                <tr class="text-sm hover:bg-gray-100 transition duration-300">
-                    <td class="p-4 flex items-center">
-                        <p class="mr-2">1</p>
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-6 h-6 rounded-full mr-1"
-                        />
-                        <p class="font-bold mr-1">Bitcoin</p>
-                        <p class="uppercase text-gray-500 hidden sm:table-cell">
-                            btc
-                        </p>
-                    </td>
-                    <td class="font-bold">$44,042.32</td>
-                    <td class="font-bold">
-                        <div class="text-green-500">
-                            <fa icon="caret-up" class="mr-1" />4.53%
-                        </div>
-                    </td>
-                    <td class="hidden sm:table-cell">$830,639,232,860</td>
-                    <td class="pr-4 hidden sm:table-cell">33,159,600,827</td>
                 </tr>
             </tbody>
         </table>
@@ -395,100 +172,145 @@
 </template>
 
 <script>
-    import { ref } from "vue";
-    import "./style.css";
+    import { ref, computed, onMounted } from "vue";
     import axios from "axios";
+
     export default {
         name: "App",
         setup() {
             const coins = ref([]);
+            const events = ref([]);
+            const searchQuery = ref("");
+
             const getCoins = async () => {
                 try {
                     const res = await axios.get(
-                        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h"
+                        "https://api.coingecko.com/api/v3/coins/markets",
+                        {
+                            params: {
+                                vs_currency: "usd",
+                                order: "market_cap_desc",
+                                per_page: 100,
+                                page: 1,
+                                sparkline: false,
+                                price_change_percentage: "1h",
+                            },
+                        }
                     );
                     coins.value = res.data;
                 } catch (err) {
-                    console.log(err);
+                    console.error("Error fetching coins:", err);
                 }
             };
 
-            setInterval(() => {
+            const getEvents = async () => {
+                try {
+                    const res = await axios.get(
+                        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
+                    );
+                    console.log("Events Data (From Coins API):", res.data);
+
+                    events.value = res.data.map((coin) => ({
+                        id: coin.id,
+                        title: coin.name + " Updates",
+                        description: `Latest market update for ${
+                            coin.name
+                        }. Current price: $${coin.current_price.toLocaleString()}`,
+                        image:
+                            coin.image ||
+                            "https://via.placeholder.com/320x200?text=No+Image",
+                        link: `https://www.coingecko.com/en/coins/${coin.id}`,
+                    }));
+                } catch (err) {
+                    console.error("Error fetching events:", err);
+                }
+            };
+
+            const handleImageError = (event) => {
+                event.target.src =
+                    "https://via.placeholder.com/320x200?text=No+Image";
+            };
+
+            onMounted(() => {
                 getCoins();
-            }, 1200);
+                getEvents();
+                setInterval(getCoins, 60000);
+            });
+
+            const filteredCoins = computed(() =>
+                coins.value.filter(
+                    (coin) =>
+                        coin.name
+                            .toLowerCase()
+                            .includes(searchQuery.value.toLowerCase()) ||
+                        coin.symbol
+                            .toLowerCase()
+                            .includes(searchQuery.value.toLowerCase())
+                )
+            );
+
+            return { coins, events, searchQuery, filteredCoins };
         },
     };
 </script>
 
-<style>
-    #app {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+<style scoped>
     .marquee-content {
-        animation: scrolling 20s linear infinite;
+        display: flex;
+        white-space: nowrap;
+        animation: marquee 20s linear infinite;
     }
-    .marquee-content:hover {
-        animation-play-state: paused;
+
+    @keyframes marquee {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
     }
-    .marquee-content li {
-        width: 20%;
+
+    .event a {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
-    .marquee:before,
-    .marquee:after {
-        position: absolute;
-        top: 0;
-        width: 10rem;
-        height: 3em;
-        content: "";
-        z-index: 1;
+
+    .event a:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     }
-    .marquee:before {
-        left: 0;
-        background: linear-gradient(to right, #111 0%, transparent 100%);
-    }
-    .marquee:after {
-        right: 0;
-        background: linear-gradient(to left, #111 0%, transparent 100%);
-    }
+
     .event {
-        background-image: url("./assets/bg.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        position: relative;
+        background: #111;
+        padding: 4rem 0;
     }
-    .event:before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 6em;
-        content: "";
-        z-index: 1;
-        background: -moz-linear-gradient(
-            top,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(255, 255, 255, 0) 100%
-        ); /* FF3.6-15 */
-        background: -webkit-linear-gradient(
-            top,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(255, 255, 255, 0) 100%
-        ); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(
-            to top,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(255, 255, 255, 0) 100%
-        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+    .event-card {
+        width: 18rem;
+        background: #222;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    @keyframes scrolling {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-200%);
-        }
+    .event-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    .event-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .event-content {
+        padding: 1rem;
+    }
+    .event-title {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+    }
+    .event-desc {
+        font-size: 0.875rem;
+        color: #aaa;
+        margin-top: 0.5rem;
     }
 </style>
