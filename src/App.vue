@@ -1,7 +1,7 @@
 <template>
     <!-- ============ Welcome Message ============ -->
     <div
-        class="welcome-message text-center py-8 bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
+        class="welcome-message text-center py-8 bg-gradient-to-r from-green-500 to-yellow-500 text-white"
     >
         <h1 class="text-3xl font-bold">
             <span ref="typingText">{{ displayedText }}</span>
