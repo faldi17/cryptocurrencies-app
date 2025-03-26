@@ -37,313 +37,41 @@
                     </div>
                 </div>
             </li>
-            <!-- 2 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4 object-cover"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold text-xs lg:text-base flex justify-end"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <!-- 3 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold text-xs lg:text-base flex justify-end"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <!-- 4 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold text-xs lg:text-base flex justify-end"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <!-- 5 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold text-xs lg:text-base flex justify-end"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <!-- 6 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold text-xs lg:text-base flex justify-end"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <!-- 7 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold text-xs lg:text-base flex justify-end"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <!-- 8 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold text-xs lg:text-base flex justify-end"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <!-- 9 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold text-xs lg:text-base flex justify-end"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <!-- 10 -->
-            <li
-                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
-            >
-                <div class="flex justify-between w-3/4">
-                    <!-- ticker -->
-                    <div class="flex items-center">
-                        <img
-                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
-                            alt="coin logo"
-                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
-                        />
-                        <div class="hidden lg:block">
-                            <p class="font-bold">Bitcoin</p>
-                            <p class="text-xs uppercase tracking-widest">btc</p>
-                        </div>
-                    </div>
-                    <!-- price -->
-                    <div>
-                        <p
-                            class="font-bold text-xs lg:text-base flex justify-end"
-                        >
-                            44,042.32
-                        </p>
-                        <!-- percent green -->
-                        <p
-                            class="font-bold text-xs text-green-400 flex justify-end items-center"
-                        >
-                            <fa icon="caret-up" class="mr-1" />
-                            4.53%
-                        </p>
-                    </div>
-                </div>
-            </li>
             <!-- clones -->
+            <!-- 1 -->
+            <li
+                class="flex justify-center items-center flex-shrink-0 text-white transform scale-75 lg:scale-100"
+            >
+                <div class="flex justify-between w-3/4">
+                    <!-- ticker -->
+                    <div class="flex items-center">
+                        <img
+                            src="https://gemwallet.com/images/learn/what-is-cryptocurrency-beginners-guide.png"
+                            alt="coin logo"
+                            class="w-4 h-4 lg:w-6 lg:h-6 rounded-full mr-4"
+                        />
+                        <div class="hidden lg:block">
+                            <p class="font-bold">Bitcoin</p>
+                            <p class="text-xs uppercase tracking-widest">btc</p>
+                        </div>
+                    </div>
+                    <!-- price -->
+                    <div>
+                        <p
+                            class="font-bold flex justify-end text-xs lg:text-base"
+                        >
+                            44,042.32
+                        </p>
+                        <!-- percent green -->
+                        <p
+                            class="font-bold text-xs text-green-400 flex justify-end items-center"
+                        >
+                            <fa icon="caret-up" class="mr-1" />
+                            4.53%
+                        </p>
+                    </div>
+                </div>
+            </li>
         </ul>
     </div>
     <!-- ============ Events ============ -->
