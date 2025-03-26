@@ -233,6 +233,7 @@
 </script>
 
 <style scoped>
+    /* MARQUEE  */
     .marquee {
         width: 100%;
         overflow: hidden;
@@ -275,19 +276,21 @@
         object-fit: contain;
     }
 
-    /* Events */
+    /* EVENTS */
     .event {
         background: #f9f9f9;
         padding: 4rem 0;
     }
 
     .event-card {
-        width: 18rem;
+        width: 100%;
+        max-width: 18rem;
         background: white;
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
+        padding: 12px;
     }
 
     .event-card:hover {
@@ -298,14 +301,31 @@
         width: 100%;
         height: 180px;
         object-fit: cover;
+        border-radius: 6px;
     }
 
-    @keyframes scrolling {
-        0% {
-            transform: translateX(0);
+    .event-content {
+        padding: 12px;
+    }
+
+    .event-title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+
+    .event-desc {
+        font-size: 0.875rem;
+        color: #555;
+    }
+
+    @media (max-width: 640px) {
+        .event {
+            padding: 2rem 1rem;
         }
-        100% {
-            transform: translateX(-100%);
+
+        .event-card {
+            max-width: 100%;
         }
     }
 </style>
