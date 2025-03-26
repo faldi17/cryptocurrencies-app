@@ -1,4 +1,18 @@
 <template>
+    <!-- ============ Welcome Message ============ -->
+    <div
+        class="welcome-message text-center py-8 bg-gradient-to-r from-indigo-500 to-purple-600 text-white"
+    >
+        <h1 class="text-3xl font-bold">
+            <span ref="typingText">{{ displayedText }}</span>
+            <span class="animate-pulse">|</span>
+        </h1>
+        <p class="text-lg opacity-80 mt-2">
+            Stay ahead with real-time market insights and the latest events in
+            the crypto world.
+        </p>
+    </div>
+
     <!-- ============ Marquee ============ -->
     <div class="marquee w-full h-12 overflow-hidden bg-black relative">
         <ul class="marquee-content flex h-full" ref="mq">
@@ -155,6 +169,42 @@
             const coins = ref([]);
             const events = ref([]);
             const searchQuery = ref("");
+            const displayedText = ref("");
+            const texts = [
+                "Welcome to CryptoPulse! 🚀",
+                "Track trends like a pro! 📊",
+                "Never miss a market move! 🔥",
+            ];
+
+            let index = 0;
+            let charIndex = 0;
+            const typingSpeed = 100;
+            const erasingSpeed = 50;
+            const delayBetweenTexts = 2000;
+
+            function typeText() {
+                if (charIndex < texts[index].length) {
+                    displayedText.value += texts[index].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeText, typingSpeed);
+                } else {
+                    setTimeout(eraseText, delayBetweenTexts);
+                }
+            }
+
+            function eraseText() {
+                if (charIndex > 0) {
+                    displayedText.value = texts[index].substring(
+                        0,
+                        charIndex - 1
+                    );
+                    charIndex--;
+                    setTimeout(eraseText, erasingSpeed);
+                } else {
+                    index = (index + 1) % texts.length;
+                    setTimeout(typeText, typingSpeed);
+                }
+            }
 
             const getCoins = async () => {
                 try {
@@ -207,6 +257,7 @@
                 getCoins();
                 getEvents();
                 setInterval(getCoins, 60000);
+                setTimeout(typeText, 500);
             });
 
             const filteredCoins = computed(() =>
@@ -227,6 +278,7 @@
                 searchQuery,
                 filteredCoins,
                 handleImageError,
+                displayedText,
             };
         },
     };
